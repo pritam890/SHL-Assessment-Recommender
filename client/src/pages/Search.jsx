@@ -10,7 +10,7 @@ function Search() {
     if (!query.trim()) return;
     setLoading(true);
     try {
-      const response = await axios.post('http://127.0.0.1:4000/query', { query });
+      const response = await axios.post('https://shl-assessment-recommender-u6d0.onrender.com/query', { query });
       setResults(response.data.results || []);
     } catch (error) {
       console.error("Error fetching results:", error);
